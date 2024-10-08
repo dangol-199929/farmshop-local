@@ -48,7 +48,7 @@ export const checkoutImg = {
   pickUp: "/images/pickup.svg",
 };
 
-export const FallBackImg = "/images/noimage.svg";
+export const FallBackImg = "/images/shared/no-image.png";
 
 export const services = {
   delivery: "/images/worldwide_delivery.svg",
