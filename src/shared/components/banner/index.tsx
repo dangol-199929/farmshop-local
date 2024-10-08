@@ -68,7 +68,7 @@ function Banner() {
                   }
                 >
                   <CustomImage
-                    className="m-auto mb-8 object-contain h-full w-full rounded-2xl"
+                    className="m-auto object-contain h-full w-full rounded-2xl"
                     src={banner?.image}
                     width={937}
                     height={500}

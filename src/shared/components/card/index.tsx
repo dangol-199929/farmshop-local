@@ -87,7 +87,7 @@ const Card: React.FC<Props> = ({ product, cartItem }) => {
   }, [loggedIn]);
 
   return (
-    <div className="max-w-sm mx-auto bg-white rounded-2xl overflow-hidden group p-1">
+    <div className=" bg-white rounded-2xl overflow-hidden group p-1">
       <div className="relative group-hover:scale-[1.01] transition-all duration-300">
         <Link href={`/products/${product?.slug}`}>
           <CustomImage
