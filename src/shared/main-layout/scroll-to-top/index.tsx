@@ -1,6 +1,7 @@
 import CustomImage from "@/features/custom-image";
+import { Button } from "@/shared/components/ui/button";
 import { UpArrow } from "@/shared/lib/image-config";
-import Image from "next/image";
+
 import { useState, useEffect } from "react";
 
 const ScrollToTopButton = () => {
@@ -30,12 +31,12 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <button
+    <Button
       title="scroll to top"
       type="button"
       className={`${
         isVisible ? "opacity-100" : "opacity-0"
-      } fixed bottom-6 right-[100px] z-[100] md:right-[95px] bg-primary text-white rounded-full p-2  md:p-5 transition-opacity duration-300 hover:bg-orange-100`}
+      } fixed bottom-6 right-[100px] z-[100] md:right-[95px] rounded-full p-4 py-6 !aspect-square border border-white/20`}
       onClick={scrollToTop}
     >
       <CustomImage
@@ -46,7 +47,7 @@ const ScrollToTopButton = () => {
         style={{ width: "auto", height: "auto" }}
         className="min-w-[15px] max-w-[15px] md:max-w-full"
       />
-    </button>
+    </Button>
   );
 };
 

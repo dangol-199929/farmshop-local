@@ -19,7 +19,7 @@ export default function SwiperNavigation({
   return (
     <div className={`flex space-x-4 ${className}`}>
       <Button
-        variant="outline"
+        variant="outlineDark"
         className="!rounded-full aspect-square p-0"
         title="Previous"
         disabled={prevDisabled}
@@ -29,7 +29,7 @@ export default function SwiperNavigation({
         <span className="sr-only">Previous</span>
       </Button>
       <Button
-        variant="outline"
+        variant="outlineDark"
         className="!rounded-full aspect-square p-0"
         title="Next"
         disabled={nextDisabled}

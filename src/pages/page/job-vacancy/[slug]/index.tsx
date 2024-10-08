@@ -55,7 +55,6 @@ const CareerDetailPage: NextPageWithLayout = () => {
     const findJob = careerData?.find((job) => job.job_slug === slug);
     setJobId(findJob?.id);
   }, [careerData]);
-  console.log("router", router);
 
   const copyToClipboard = () => {
     const jobLink = `www.Farmshop.com${router.asPath}`;

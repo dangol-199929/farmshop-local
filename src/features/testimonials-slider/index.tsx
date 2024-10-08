@@ -9,23 +9,32 @@ import { useQuery } from "@tanstack/react-query";
 import CustomImage from "../custom-image";
 import { Skeleton } from "@/shared/components/ui/skeleton";
 import Title from "@/shared/components/title";
+import { getTestimonials } from "@/services/testimonials.service";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/shared/components/ui/avatar";
+import { FallBackImg } from "@/shared/lib/image-config";
 
-interface IBrandData {
+interface ITestimonialData {
   id: number;
   name: string;
-  description: string;
-  excerpt: string | null;
-  icon: string;
+  content: string;
+  createdAt: string;
+  designation: string | null;
+  image: string;
   iconAltText: string | null;
-  slug: string;
-  status: boolean;
 }
-interface IBrand {
-  data: IBrandData[];
+interface ITestimonials {
+  data: ITestimonialData[];
 }
 
-export default function BrandSlider() {
-  const { data: brands, isLoading } = useQuery<IBrand>(["getBrand"], getBrand);
+export default function TestimonialsSlider() {
+  const { data: testimonials, isLoading } = useQuery<ITestimonials>(
+    ["getTestimonials"],
+    getTestimonials
+  );
 
   const [swiperRef, setSwiperRef] = useState<SwiperClass>();
   const [prevDisable, setPrevDisable] = useState(true);
@@ -66,7 +75,11 @@ export default function BrandSlider() {
     <div className=" mx-auto px-4 py-[49px] bg-[#F9F9FA]">
       <div className="container">
         <div className="flex justify-between items-center mb-6">
-          <Title type="title-section" text={"Shop By Brands"} />
+          <Title
+            type="title-section"
+            text={"Client Testimonials"}
+            subTitle={"What our happy customers says !"}
+          />
           <SwiperNavigation
             prevDisabled={prevDisable}
             nextDisabled={nextDisable}
@@ -127,24 +140,26 @@ export default function BrandSlider() {
         >
           {isLoading
             ? renderSkeletons()
-            : brands?.data?.map((brand) => (
-                <SwiperSlide key={brand.id}>
-                  <div className="bg-[#FFFFFF] p-4 rounded-2xl shadow-sm flex justify-center items-center gap-4 ">
-                    <CustomImage
-                      src={brand.icon}
-                      alt={brand.iconAltText || `${brand.name} logo`}
-                      width={120}
-                      height={120}
-                      className="w-[120px] h-[120px] rounded-2xl object-contain bg-[#F9F9FA]"
-                    />
+            : testimonials?.data?.map((testimonial) => (
+                <SwiperSlide key={testimonial.id}>
+                  <div className="bg-[#FFFFFF] p-4 rounded-2xl shadow-sm">
+                    <div className="flex justify-start items-center gap-2 mb-4">
+                      <Avatar className="w-[56px] h-[56px] flex gap-2">
+                        <AvatarImage src={testimonial.image} />
+                        <AvatarFallback>{FallBackImg}</AvatarFallback>
+                      </Avatar>
+                      <div className="">
+                        <p className="text-base font-semibold">
+                          {testimonial.name}
+                        </p>
+                        <p className="text-sm font-light text-gray-500">
+                          {testimonial.designation || "Customer"}
+                        </p>
+                      </div>
+                    </div>
                     <div className="block overflow-hidden">
-                      <h3 className="text-base font-semibold mb-2 truncate overflow-hidden w-full">
-                        {brand.name}
-                      </h3>
-                      <p className="text-gray-600 text-sm font-light line-clamp-4">
-                        {brand.description ||
-                          brand.excerpt ||
-                          "No description available"}
+                      <p className="text-gray-500 text-sm font-light line-clamp-2 h-[40px]">
+                        {testimonial.content || "No description available"}
                       </p>
                     </div>
                   </div>

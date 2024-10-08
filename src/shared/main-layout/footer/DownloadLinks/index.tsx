@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { PlayStore, AppStore } from "@/shared/lib/image-config";
+import { AppBanner } from "@/shared/lib/image-config";
 import CustomImage from "@/features/custom-image";
 
 function DownloadLinks({ configData }: any) {
@@ -18,7 +17,7 @@ function DownloadLinks({ configData }: any) {
               className="p-0 btn"
             >
               <CustomImage
-                src={PlayStore}
+                src={AppBanner.play}
                 height={32}
                 width={108}
                 quality={100}
@@ -33,7 +32,7 @@ function DownloadLinks({ configData }: any) {
               className="p-0 btn"
             >
               <CustomImage
-                src={AppStore}
+                src={AppBanner.play}
                 className="rounded-sm"
                 quality={100}
                 height={32}

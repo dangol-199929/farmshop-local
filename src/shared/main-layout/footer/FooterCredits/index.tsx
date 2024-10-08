@@ -3,30 +3,29 @@ import Link from "next/link";
 
 function FooterCredits({ currentYear, configData }: any) {
   return (
-    <div className="relative py-5 text-sm text-white bg-[rgb(0,0,0,0.2)]">
+    <div className="relative py-5 text-sm text-white border-t-[1px] !border-[#f9f9f9]/20">
       <div className="flex flex-wrap justify-center gap-2 mx-auto text-white">
-        <p className="text-center">
+        <p className="text-center uppercase font-light">
           © {currentYear}{" "}
-          <Link href="/" className="hover:text-orange-450">
+          <Link href="/" className="hover:underline font-semibold">
             {configData?.data?.title}
           </Link>
           . All Rights Reserved
         </p>
-        <div className="before:bg-white before:w-[1px] after:w-[1px] after:bg-white m-0 hidden xs:flex"></div>
-        <p>
+        <p className="uppercase font-light">
           Powered By{" "}
-          <Link
+          {/* <Link
             href="https://koklass.com/"
             target="_blank"
-            className="hover:text-orange-450"
+            className="hover:underline"
           >
             Koklass
           </Link>{" "}
-          from{" "}
+          from{" "} */}
           <Link
             href="https://ekbana.com/"
             target="_blank"
-            className="hover:text-orange-450"
+            className="hover:underline font-semibold"
           >
             EKbana
           </Link>

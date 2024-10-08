@@ -17,6 +17,9 @@ import { NextPageWithLayout } from "./_app";
 import HowWeWork from "@/shared/components/how-we-work";
 import BrandSlider from "@/features/ShopByBrand";
 import BlogSlider from "@/features/latest-blogs";
+import TestimonialsSlider from "@/features/testimonials-slider";
+import DownloadApp from "@/shared/components/download-app";
+import NewsletterSignUp from "@/shared/components/home-new-letter";
 
 const Home: NextPageWithLayout = () => {
   //Cookie
@@ -91,6 +94,9 @@ const Home: NextPageWithLayout = () => {
           )}
         <BrandSlider />
         <BlogSlider />
+        <TestimonialsSlider />
+        <DownloadApp />
+        <NewsletterSignUp />
       </div>
     </>
   );

@@ -2,7 +2,7 @@
   @apply opacity-100 text-white block mb-3 uppercase;
 }
 .footer-link {
-  @apply hover:text-primary font-normal text-white transition-all text-xs;
+  @apply hover:underline font-normal text-white transition-all text-sm;
 }
 .dropdown-content {
   @apply z-50;

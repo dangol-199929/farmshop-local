@@ -62,7 +62,7 @@ const AppCategories: React.FC<IProps> = ({ prev }) => {
       content = (
         <div className="container">
           <section className="my-[60px]">
-            <div className="relative flex items-center justify-between">
+            <div className="relative flex items-center justify-between mb-6">
               <Title type="title-section" text={prev?.title} />
               {prev?.product?.length > 0 && (
                 <SwiperNavigation

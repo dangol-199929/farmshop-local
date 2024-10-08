@@ -6,20 +6,19 @@ const SocialLinks = ({ configData }: any) => {
   const socialLinks = [
     {
       href: "section5 facebook",
-      icon: <FaFacebookF className="text-xl text-white" />,
+      icon: <FaFacebookF className="text-2xl text-[#414042]" />,
       aria: "fb-link",
     },
     {
       href: "section5 instagram",
-      icon: <FaInstagram className="text-xl text-white" />,
+      icon: <FaInstagram className="text-2xl text-[#414042]" />,
       aria: "insta-link",
     },
   ];
 
   return (
-    <div className="mt-4">
-      <span className="text-base font-bold footer-title">Social Media</span>
-      <div className="flex gap-3.5 mt-4">
+    <div>
+      <div className="flex gap-3.5">
         {configData?.data?.pageData &&
           socialLinks.map((link, index) => (
             <Link

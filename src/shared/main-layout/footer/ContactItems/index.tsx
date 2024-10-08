@@ -12,7 +12,7 @@ const ContactItems = ({ configData }: any) => {
 
   return (
     <div className="w-full xs:w-[45%] md:w-[30%] mb-3">
-      <span className="text-base font-bold footer-title">
+      <span className="text-xl font-bold footer-title">
         {configData?.data?.pageData?.["section1 title"]}
       </span>
       {contactItems.map((item, index) => (

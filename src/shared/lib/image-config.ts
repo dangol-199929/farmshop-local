@@ -6,9 +6,8 @@ export const DeliveryImg = "/images/delivery-img.png";
 export const LockImg = "/images/lock-img.png";
 export const CallImg = "/images/call-img.png";
 export const QR = "/images/qr__scan.webp";
-export const AppStore = "/images/app-store.svg";
-export const PlayStore = "/images/play-store.svg";
-export const FooterBg = "/images/footer-bg.svg";
+
+export const FooterBg = "/images/header-footer/footer-bg.svg";
 export const Esewa = "/images/esewa.png";
 export const MasterCard = "/images/master-card.png";
 export const CashOnHand = "/images/cash-on-hand.png";
@@ -26,8 +25,8 @@ export const ProfileImg =
   "https://api.uat.ordering-merokishan.ekbana.net/storage/uploads/config/image-config/avatar-image/6422a939ac2db.png";
 
 export const socials = {
-  facebook: "/images/facebook.svg",
-  instagram: "/images/instagram.svg",
+  facebook: "/images/header-footer/facebook-icon.svg",
+  instagram: "/images/header-footer/instagram-icon.svg",
   youtube: "/images/youtube.svg",
 };
 
@@ -56,4 +55,10 @@ export const services = {
   wallet: "/images/wallet.svg",
   truck: "/images/truck.svg",
   support: "/images/support.svg",
+};
+
+export const AppBanner = {
+  apple: "/images/download-app-banner/applestore.svg",
+  play: "/images/download-app-banner/googlestore.svg",
+  phones: "/images/download-app-banner/banner-phones.svg",
 };

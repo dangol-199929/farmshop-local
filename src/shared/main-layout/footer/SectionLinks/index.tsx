@@ -4,7 +4,7 @@ import Link from "next/link";
 const SectionLinks = ({ configData }: any) => {
   return (
     <div className="w-full xs:w-[45%] md:w-[23%] mb-3">
-      <span className="text-base font-bold footer-title">
+      <span className="text-xl font-bold footer-title">
         {configData?.data?.pageData?.["section2 title"]}
       </span>
       {configData?.data?.pageData &&

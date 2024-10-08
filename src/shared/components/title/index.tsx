@@ -27,9 +27,7 @@ const Title: React.FC<Props> = ({
         <div>
           <h3
             className={
-              className
-                ? `${className}`
-                : "text-slate-850 text-2xl capitalize font-semibold mb-[9px]"
+              className ? `${className}` : "text-3xl font-bold text-[#414042]"
             }
           >
             {text}
@@ -39,7 +37,7 @@ const Title: React.FC<Props> = ({
               className={
                 subClassName
                   ? `${subClassName}`
-                  : "text-[#00A187] text-sm font-normal leading-[18px] mt-[3px] capitalize"
+                  : "text-green-600 font-light text-base mt-2 capitalize"
               }
             >
               {subTitle}
@@ -66,7 +64,7 @@ const Title: React.FC<Props> = ({
   return (
     <div
       className={`flex justify-between items-center ${
-        type == "title-section" && !mb ? "mb-[30px]" : ""
+        type == "title-section" && !mb ? "mb-[0px]" : ""
       }`}
     >
       {getType()}
