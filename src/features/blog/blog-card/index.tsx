@@ -1,6 +1,5 @@
-import React from "react";
 import Link from "next/link";
-import { ArrowRightIcon, ArrowUpRight } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 
 import CustomImage from "@/features/custom-image";
 import { Button } from "@/shared/components/ui/button";
@@ -27,7 +26,7 @@ function BlogCard({
   authorName: string;
   publishedDate: string;
   featuredImage: string | null;
-  size: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg";
 }) {
   return (
     <Card

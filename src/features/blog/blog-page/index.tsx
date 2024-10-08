@@ -1,7 +1,5 @@
 import React from "react";
 import BlogSidebar from "../blog-sidebar";
-import { useQuery } from "@tanstack/react-query";
-import { getBlogs } from "@/services/blog.service";
 import BlogCard from "../blog-card";
 import { IBlogItem } from "@/interface/blog.interface";
 import { useBlogs } from "@/hooks/blog.hook";
