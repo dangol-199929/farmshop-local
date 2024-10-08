@@ -33,7 +33,6 @@ export default function NewsletterSignUp() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Here you would typically send the email to your API
     console.log(values);
   }
 
